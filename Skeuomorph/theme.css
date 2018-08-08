@@ -13,10 +13,10 @@
 html,body {
 	height: 100%;
 	width: 100%;
-	background: black;
-	color: white;
-	font-family: fixedsys;
-	font-size: 20px;
+	background: #ccc;
+	color: #666;
+	font-family: Arial;
+	font-size: 16px;
 }
 
 *:focus {
@@ -28,12 +28,12 @@ html,body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: black;
+    background: none;
 }
 
 ::-webkit-scrollbar-thumb {
 	width: 20px;
-    background-color: white;
+    background-color: #666666;
 }
 
 #main {
@@ -47,37 +47,45 @@ html,body {
 	height: 100%;
 	width: 250px;
 	margin-right: 10px;
-	border: 5px solid white;
+    border-radius: 15px;
+	border: 1px solid #585858;
 }
 
 #chatWindow {
 	height: 100%;
-	border: 5px solid white;
+	border: 1px solid #585858;
+    border-radius: 15px;
 }
 
 #chatBox {
-	background-color: black;
-	color: white;
-	height: 45px;
+	background: none;
+	color: #444444;
+	height: 35px;
 	width: calc(100% - 270px);
 	border-style: solid;
-	border-color: white;
-	border-width: 5px 0 0 0;
+	border-color: #585858;
+	border-width: 0 0 0 0;
 	padding-left: 10px;
 	padding-right: 10px;
 	position: absolute;
 	left: 265px;
 	bottom: 5px;
-	font-size: 24px;
+	font-size: 20px;
+}
+
+input[type=submit] {
+    visibility: hidden;
 }
 
 #channel {
 	height: 45px;
 	width: 100%;
 	border-style: solid;
-	border-color: white;
-	border-width: 0 0 5px 0;
-	font-size: 28px;
+	border-color: #585858;
+	border-width: 0 0 1px 0;
+    background: rgb(248,253,255);
+    background: linear-gradient(180deg, rgba(248,253,255,1) 0%, rgba(185,236,255,1) 22%, rgba(134,213,255,1) 49%, rgba(100,171,255,1)           50%, rgba(101,197,255,1) 100%);
+	font-size: 23px;
 	line-height: 40px;
 }
 
@@ -86,8 +94,9 @@ html,body {
 	width: 34px;
 	color: gray;
 	font-style: italic;
-	font-size: 28px;
-	padding-left: 10px;
+	font-size: 23px;
+    padding-top: 3px;
+	padding-left: 17px;
 	padding-right: 10px;
 	user-select: none;
 }
@@ -96,11 +105,12 @@ html,body {
 	height: 45px;
 	width: 100%;
 	border-style: solid;
-	border-color: white;
-	border-width: 0 0 5px 0;
+	border-color: #585858;
+	border-width: 0 0 1px 0;
 	font-size: 28px;
 	padding-left: 10px;
 	padding-right: 10px;
+    background: linear-gradient(180deg, rgba(248,253,255,1) 0%, rgba(185,236,255,1) 22%, rgba(134,213,255,1) 49%, rgba(100,171,255,1)           50%, rgba(101,197,255,1) 100%);
 	white-space: nowrap;
 	user-select: none;
 }
@@ -110,7 +120,7 @@ html,body {
 	width: 240px;
 	border-style: solid;
 	border-color: white;
-	border-width: 5px 0 0 0;
+	border-width: 0 0 0 0;
 	padding-left: 10px;
 	padding-right: 10px;
 	position: absolute;
@@ -121,6 +131,7 @@ html,body {
 
 #chat {
 	height: calc(100% - 90px);
+    background: url('https://raw.githubusercontent.com/324Luke/pychat-themes/master/Skeuomorph/texture.png');
 	width: 100%;
 	padding: 10px 5px 5px 10px;
 }
@@ -155,12 +166,11 @@ html,body {
 
 #channelSwitcher {
 	height: 45px;
-	width: 240px;
-	background-color: black;
+	width: 250px;
+	background-color: navy;
 	color: white;
 	border-style: solid;
-	border-color: white;
-	border-width: 0 0 5px 0;
+	border-width: 0 0 0 0;
 	font-size: 24px;
 	line-height: 40px;
 	padding-left: 35px;
@@ -176,11 +186,13 @@ html,body {
 
 #connection {
 	height: calc(100% - 45px);
-	width: 240px;
+	width: 250px;
+    background: url('https://raw.githubusercontent.com/324Luke/pychat-themes/master/Skeuomorph/texture.png');
+    background-repeat: repeat;
 	position: relative;
-	bottom: 42px;
+	bottom: 37px;
 	padding-left: 10px;
-	padding-top: 10px;
+	padding-top: 5px;
 	font-size: 22px;
 }
 
@@ -190,7 +202,8 @@ html,body {
 }
 
 .pingedMessage {
-    background-color: #30aa06;
+    background-color: #dd4444;
+    border-radius: 5px;
 }
 
 .timestamp {
