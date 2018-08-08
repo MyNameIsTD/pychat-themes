@@ -26,7 +26,7 @@ html,body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: black;
+    background-color: #282923;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -57,8 +57,8 @@ html,body {
 #chatBox {
     background-color: #333;
     color: white;
-    height: 50px;
-    width: calc(100% - 250px);
+    height: 45px;
+    width: calc(100% - 250spx);
     border: 0;
     padding-left: 10px;
     padding-right: 10px;
@@ -74,6 +74,9 @@ html,body {
     font-size: 28px;
     line-height: 40px;
     border: none;
+    border-bottom: 5px solid;
+    border-bottom-width: thick;
+    border-bottom-color: #F1825F;
 }
 
 .hashtag {
@@ -194,7 +197,7 @@ html,body {
 .timestamp {
     visibility: hidden;
     width: auto;
-    background-color: white;
+    background-color: #F1825F;
     color: #000;
     text-align: center;
     border-radius: 5px;
