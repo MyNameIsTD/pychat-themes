@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 
 
@@ -11,9 +11,10 @@
 html,body {
     height: 100%;
     width: 100%;
-    background: #282923;
-    color: white;
-    font-family: 'Source Code Pro', monospace;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    color: #DDDDDD;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
 }
 
@@ -26,7 +27,7 @@ html,body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #282923;
+    background-color: black;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -44,9 +45,10 @@ html,body {
     border: none;
     float: left;
     height: 100%;
-    width: 250px;
+    width: 249px;
     margin-right: 10px;
-    background-color: #333333;
+    opacity: 0.5;
+    background: black;
 }
 
 #chatWindow {
@@ -55,10 +57,11 @@ html,body {
 }
 
 #chatBox {
-    background-color: #333;
+    opacity: 0.5;
+    background: black;
     color: white;
-    height: 45px;
-    width: calc(100% - 250spx);
+    height: 50px;
+    width: calc(100% - 250px);
     border: 0;
     padding-left: 10px;
     padding-right: 10px;
@@ -74,9 +77,6 @@ html,body {
     font-size: 28px;
     line-height: 40px;
     border: none;
-    border-bottom: 5px solid;
-    border-bottom-width: thick;
-    border-bottom-color: #F1825F;
 }
 
 .hashtag {
@@ -156,7 +156,7 @@ html,body {
 #channelSwitcher {
     height: 45px;
     width: 240px;
-    background: #333;;
+    background: black;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
@@ -166,6 +166,10 @@ html,body {
     line-height: 40px;
     padding-left: 35px;
     padding-right: 10px;
+}
+
+#input {
+    background-color: transparent;
 }
 
 #channelSwitcher + .hashtag {
@@ -191,13 +195,15 @@ html,body {
 }
 
 .pingedMessage {
-    background-color: #F1825F;
+    background: black;
+    opacity: 0.5;
+    border-radius: 6px;
 }
 
 .timestamp {
     visibility: hidden;
     width: auto;
-    background-color: #F1825F;
+    background-color: white;
     color: #000;
     text-align: center;
     border-radius: 5px;
