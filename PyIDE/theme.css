@@ -68,7 +68,7 @@ html,body {
     background: black;
     color: white;
     height: 50px;
-    width: 100%;
+    width: calc(100% - 250px);
     border: 0;
     padding-left: 10px;
     padding-right: 10px;
