@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -43,24 +45,23 @@ html,body {
     height: 100%;
     width: 250px;
     margin-right: 10px;
-    /*border: 5px solid white;*/
     background-color: #333333;
 }
 
 #chatWindow {
     height: 100%;
-    /*border: 5px solid white;*/
 }
 
 #chatBox {
-    background-color: black;
+    background-color: #333;
     color: white;
     height: 45px;
+    border: none;
     width: calc(100% - 270px);
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
-    border: solid white;
+    border: 0;
     padding-left: 10px;
     padding-right: 10px;
     position: absolute;
@@ -72,9 +73,6 @@ html,body {
 #channel {
     height: 45px;
     width: 100%;
-    /*border-style: solid;
-    border-color: white;
-    border-width: 0 0 5px 0;*/
     font-size: 28px;
     line-height: 40px;
 }
@@ -93,9 +91,6 @@ html,body {
 #logo {
     height: 45px;
     width: 100%;
-    /*border-style: solid;
-    border-color: white;
-    border-width: 0 0 5px 0;*/
     font-size: 28px;
     padding-left: 10px;
     padding-right: 10px;
@@ -106,9 +101,9 @@ html,body {
 #userInfo {
     height: 45px;
     width: 240px;
-    /*border-style: solid;
+    border-style: solid;
     border-color: white;
-    border-width: 5px 0 0 0;*/
+    border-width: 0px 0 0 0;
     padding-left: 10px;
     padding-right: 10px;
     position: absolute;
@@ -146,6 +141,10 @@ html,body {
     width: auto;
 }
 
+#ip {
+    font-size: 18px;
+}
+
 #info {
     height: calc(100% - 90px);
     width: 100%;
@@ -154,12 +153,13 @@ html,body {
 #channelSwitcher {
     height: 45px;
     width: 240px;
-    background-color: black;
+    background: #333;;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: none;
     color: white;
-    /*border-style: solid;
-    border-color: white;
-    border-width: 0 0 5px 0;*/
-    font-size: 24px;
+    font-size: 18px;
     line-height: 40px;
     padding-left: 35px;
     padding-right: 10px;
@@ -188,7 +188,7 @@ html,body {
 }
 
 .pingedMessage {
-    background-color: #30aa06;
+    background-color: #F1825F;
 }
 
 .timestamp {
