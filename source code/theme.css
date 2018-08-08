@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-/*
-
-    Made by Alexande- who the fuck cares?
-
-*/
-
 * {
     margin: 0;
     padding: 0;
@@ -63,9 +57,10 @@ html,body {
     color: white;
     height: 45px;
     width: calc(100% - 270px);
-    /*border-style: solid;
-    border-color: white;
-    border-width: 5px 0 0 0;*/
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: solid white;
     padding-left: 10px;
     padding-right: 10px;
     position: absolute;
