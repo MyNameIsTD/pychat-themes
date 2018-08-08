@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="theme.css" />
+
+        <title>PyChat | #general</title>
+
+    </head>
+    <body id="main" class="w3-row">
+        <div id="sideBar">
+            <div id="logo">PyChat v0.3</div>
+            <div id="info">
+                <form class="gay" action="/chanswitch" method="POST">
+                <input name="channel" id="channelSwitcher" placeholder="Change channel..." type="text" maxlength="10" /><div class="hashtag">#</div>
+            </form>
+                <div id="connection">
+                    <div id="ping">Placeholder<div class="REE">Latency:</div></div>
+                    <div id="ip">Placeholder<div class="REE">IP:</div></div>
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
+
+            <div id="userInfo">luke</div>
+        </div>
+        <div id="chatWindow" class="w3-rest">
+            <div id="channel"><div class="hashtag">#</div>general</div>
+                <div class="chat" id="chat" style="overflow-y: scroll;">
+
+                    <p class="none">There have not been any messages since you joined.</p>
+
+                </div>
+            <form class="biggay" action="" method="POST">
+            <input class="chatBox" id="chatBox" placeholder="Message #general..." type="text" autofocus autocomplete="off"/>
+            </form>
+        </div>
+    </body>
+
+    <!-- JavaScript -->
+
+  <!-- The following code is a hack for Socket.IO to recieve messages only addressed to the client -->
+<!--    <script type="text/javascript">
+
+
+  // send
+  function sendprevmsg(){
+      socket.emit( 'getprevmsg', {
+          channel : "general",
+          key : "31"
+      } )
+  }
+
+
+
+  var socket = io.connect('https://' + document.domain + ':' + location.port);
+  console.log("Connected successfully.")
+  sendprevmsg();
+    var form = $( 'form.biggay' ).on( 'submit', function( e ) {
+      e.preventDefault()
+      let user_input = $( 'input#chatBox' ).val()
+      socket.emit( 'chatsend', {
+        user_name : "luke",
+        message : user_input,
+        channel : "general"
+      } )
+      $( 'input#chatBox' ).val( '' ).focus()
+    } );
+
+
+
+
+  socket.on( 'chatrecieve', function( msg ) {
+    console.log("Recieved msg.")
+    if( typeof msg.message !== 'undefined' ) {
+      $( 'p.none').remove();
+      var mesg = urlify(msg.message);
+      var mesg = mesg.replace("</p>", "");
+      if( msg.channel !== "general") {return;}
+      else {
+        if(mesg.includes("@luke")) {
+          $( 'div#chat' ).append( '<div class="message"><div class="userName">'+msg.user_name+'<div class="timestamp">'+msg.timestamp+'</div></div><div class="arrow">></div><div class="messageContent pingedMessage">'+mesg+'</div></div>' );
+          var audio = new Audio("/static/sounds/ding.wav");
+          audio.play();
+        } else {
+          $( 'div#chat' ).append( '<div class="message"><div class="userName">'+msg.user_name+'<div class="timestamp">'+msg.timestamp+'</div></div><div class="arrow">></div><div class="messageContent">'+mesg+'</div></div>' );
+        }
+      var theDiv = document.getElementById('chat');
+        theDiv.scrollTop = theDiv.scrollHeight;
+        }
+    }
+  });
+
+
+  // recieve
+  socket.on('recvprevmsg', function(msg) {
+      console.log("Recieved previous message!");
+      if (msg.key == '31'){
+          var mesg = urlify(msg.message);
+          var mesg = mesg.replace("</p>", "");
+          $( 'div#chat' ).append( '<div class="message"><div class="userName">'+msg.user_name+'<div class="timestamp">'+msg.timestamp+'</div></div><div class="arrow">></div><div class="messageContent">'+mesg+'</div></div>' );
+          $( 'p.none').remove();
+      }
+  });
+</script>-->
+
+
+<!-- Thanks to Cuboid on Discord for providing me with this to automatically highlight links! -->
+<script>function urlify(text) {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+        if(url.match(/\.(jpeg|jpg|gif|png)$/) != null) {
+            $( 'div#chat' ).append( "<img src="+url+">" );
+        }
+        return '<a href="' + url + '" target="_blank">' + url + '</a>';
+    })
+    // or alternatively
+    // return text.replace(urlRegex, '<a href="$1">$1</a>')
+}</script>
+
+
+</html>
