@@ -13,7 +13,8 @@ html,body {
     width: 100%;
     background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-    color: #DDDDDD;
+    color: white;
+    text-shadow: 2px 2px black;
     font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
 }
@@ -27,12 +28,18 @@ html,body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: black;
+    background: black;
+    opacity: 0.5;
 }
 
 ::-webkit-scrollbar-thumb {
     width: 20px;
+    opacity: 0.5;
     background-color: white;
+}
+
+.biggay input[type="submit"] {
+    visibility: hidden;
 }
 
 #main {
@@ -199,13 +206,14 @@ html,body {
 .timestamp {
     visibility: hidden;
     width: auto;
-    background-color: white;
-    color: #000;
+    background-color: black;
+    color: white;
+    text-shadow: none;
     text-align: center;
     border-radius: 5px;
     position: absolute;
     bottom: 30px;
-    left: 50%;
+    left: 50px;
     margin-left: -50px;
     font-size: 18px;
     -webkit-user-select: none;
