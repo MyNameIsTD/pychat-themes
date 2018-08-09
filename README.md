@@ -9,4 +9,4 @@ This project is lead by **luke#1000** and **Cuboid#3163** on Discord
 ![Skeumorph](Skeumorph/thumb.png)
 
 #3: **Leenux** by *luke*
-![Leenux](Leenux/thumb.png)
+![Leenux](leenux/thumb.png)
