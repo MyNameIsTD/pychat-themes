@@ -27,14 +27,14 @@ html,body {
 }
 
 ::-webkit-scrollbar-track {
-    background: black;
+    background: #454545;
     opacity: 0.5;
 }
 
 ::-webkit-scrollbar-thumb {
     width: 20px;
     opacity: 0.5;
-    background-color: white;
+    background-color: #999999;
 }
 
 .biggay input[type="submit"] {
